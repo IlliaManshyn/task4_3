@@ -25,9 +25,10 @@ echo "ERROR: '$1' It's not a directory" >&2
 exit 2
 fi
 
-if ! [[ $2 =~ "^[0-9]+$" ]] 
+re='^[0-9]+$'
+if ! [[ $2 =~ $re ]]
 then
-echo "error: $2 Not a number" >&2 
+   echo "error: Not a number" >&2
 exit 3
 fi
 
